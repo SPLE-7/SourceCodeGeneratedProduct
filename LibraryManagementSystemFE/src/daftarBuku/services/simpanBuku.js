@@ -9,14 +9,14 @@ const simpanBuku = (data = {}) => {
 	const { getToken } = tokenManager();
 	const token = getToken();
 	
-	return axios.post(`${environment.rootApi}/call/buku/simpan`, body,
+	return axios.post(`http://localhost:7777/call/buku`, body,
 	{
 		params: { token },
 		
 		headers: {
-			'Authorization': token,
-			
+			'Authorization': `Bearer ${token}`,
 		}
-	})} 
+	})
+}
 
 export default simpanBuku

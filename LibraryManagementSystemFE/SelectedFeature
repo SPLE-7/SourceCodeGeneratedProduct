@@ -1,10 +1,12 @@
 DaftarBuku
-BukuDigital
+BukuFisik
 Peminjaman
 Renewal
 Recommendation
+AuthorRecommendation
 Statistik
-GenreStatistik
+AuthorStatistik
 Wishlist
 WishlistWithNote
 Review
+ReviewKomentar

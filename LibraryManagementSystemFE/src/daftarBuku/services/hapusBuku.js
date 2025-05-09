@@ -9,7 +9,7 @@ const hapusBuku = (data = {}) => {
 	const { getToken } = tokenManager();
 	const token = getToken();
 	
-	return axios.delete(`${environment.rootApi}/call/buku/hapus`, 
+	return axios.post(`${environment.rootApi}/call/buku/delete`, 
 	{
 		params: { token },
 		data: cleanFormData(body),

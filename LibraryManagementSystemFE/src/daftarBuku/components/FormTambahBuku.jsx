@@ -1,5 +1,5 @@
 /*
-	Generated on 02/05/2025 by UI Generator PRICES-IDE
+	Generated on 09/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -51,6 +51,8 @@ const FormTambahBuku = ({
   
   const sImpanBuku = (data) => {
     const cleanData = cleanFormData(data)
+	console.log(cleanData)
+	cleanData.jumlahHalaman = parseInt(cleanData.jumlahHalaman)
     simpanBuku({
       ...cleanData,
     })
@@ -60,6 +62,7 @@ const FormTambahBuku = ({
     })
     .catch((error) => {
       console.error(error);
+	  cons
           notifyError(error);
     });
   }
@@ -146,6 +149,7 @@ const FormTambahBuku = ({
 			  
 			  <Controller
 			    key="jumlahHalaman"
+				type="number"
 		        name="jumlahHalaman"
 		        control={control}
 				rules={{ required: "Harap masukkan jumlah halaman" }} 
