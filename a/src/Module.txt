@@ -1,0 +1,286 @@
+Review
+	tes1 Lihat Review Page
+	tes1 Tambah Review Page
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
+Peminjaman
+	tes1 Lihat Peminjaman Page
+	tes1 Tambah Peminjaman Buku Page
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
+DaftarBuku
+	tes1 Lihat Buku Page
+	tes1 Tambah Buku Page
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
+WishlistWithStatus
+	tes1 Lihat Wishlist With Status Page
+	tes1 Modified ViewContainer
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
+
+ReviewKomentar
+	tes1 Lihat Review Komentar Page
+	tes1 Tambah Review Komentar Page
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
+
+Wishlist
+	tes1 Lihat Wishlist Page
+	tes1 Tambah Wishlist Page
+	tes1 Confirm Delete Wishlist
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
+BukuDigital
+	tes1 Lihat Buku Digital Page
+	tes1 Tambah Buku Digital page
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
+
+Renewal
+	tes1 Lihat Peminjaman Renewal Page
+	tes1 Tambah Peminjaman Renewal Page
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
+
+Statistik
+	tes1 List Table Statistik
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+
+
+
+
+BukuFisik
+	tes1 Lihat Buku Fisik Page
+	tes1 Tambah Buku Fisik Page
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
+
+Recommendation
+	tes1 Lihat Rekomendasi Page
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+	
+
+
+
+
+WishlistWithNote
+	tes1 Lihat Wishlist With Note Page
+	tes1 Add Wishlist With Note Page
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+/*
+	Generated on 16/05/2025 by UI Generator PRICES-IDE
+	https://amanah.cs.ui.ac.id/research/ifml-regen
+	version 3.8.0
+*/
+
+
+
+
+
