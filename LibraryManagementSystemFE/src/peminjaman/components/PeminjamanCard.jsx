@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -32,16 +32,16 @@ const PeminjamanCard = ({ dataBindingPeminjaman,
           {
             id: "statusPeminjaman",
             condition: "",
-            label: "Status Peminjaman",
-  		  featureName: "",
+            label: "statusPeminjaman",
+  		  featureName: "statusPeminjaman",
             editable:  false 
           }
   ,
           {
             id: "judulBuku",
             condition: "",
-            label: "Judul Buku",
-  		  featureName: "",
+            label: "judulBuku",
+  		  featureName: "judulBuku",
             editable:  false 
           }
   ]}

@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -27,6 +27,7 @@ const [listBukuFisik, setListBukuFisik] = useState()
 	
 	
 	
+
 useEffect(() => {
 		const fetchData = async () => {
 			try {
@@ -48,7 +49,17 @@ return (
 	<Layouts.ViewContainerLayout
 		buttons={
 			<>
-			<></>
+			<Layouts.ViewContainerButtonLayout>
+			  	<Link to={`/daftarbuku/fisik/tambah
+			  	`}>
+			  		<Button className="p-2" variant="primary">
+			  		  Tambah Buku Fisik
+			  		</Button>
+			  	</Link>
+			  	
+			  	
+			
+			  </Layouts.ViewContainerButtonLayout>
 			</>
 		}
 	>

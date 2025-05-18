@@ -12,12 +12,15 @@ const ListComponentPieChartLayout = ({ data = [], itemsAttrs = [] }) => {
   const groupedBy = itemsAttrs.find((attr) =>
     attr.condition.includes("isGroupedBy")
   );
-  const groupedByLabel = itemsAttrs.find((attr) =>
-    attr.condition.includes("isGroupLabel")
-  );
+  const groupedByLabel =
+    itemsAttrs.find((attr) => attr.condition.includes("isGroupedLabel")) ||
+    groupedBy;
   const source = itemsAttrs.find((attr) => attr.condition.includes("isSource"));
   const hasCurrency = source.condition.includes("isCurrency");
-  if (!groupedBy || !source || !groupedByLabel) return "Invalid configuration";
+  // console.log("piechart.jsx ini groupedBy", groupedBy);
+  // console.log("piechart.jsx ini groupedByLabel", groupedByLabel);
+  // console.log("piechart.jsx ini source", source);
+  if (!groupedBy || !source) return "Invalid configuration";
   const chartData = data.reduce((acc, item) => {
     const group = item[groupedBy.featureName];
     const sourceValue = item[source.featureName];

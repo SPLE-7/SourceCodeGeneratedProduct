@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -12,6 +12,8 @@ import { HeaderContext } from "@/commons/components"
 import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
 import PeminjamanCard from "../components/PeminjamanCard";
+
+import getListPeminjamanRenewal from '../services/getListPeminjamanRenewal'
 const LihatPeminjamanRenewalPage = props => {
 const { checkPermission } = useAuth();
 
@@ -21,10 +23,17 @@ const { checkPermission } = useAuth();
 	});
 	const { setTitle } = useContext(HeaderContext);
 
+const [listPeminjamanRenewal, setListPeminjamanRenewal] = useState()
+	
+	
+	
+
 useEffect(() => {
 		const fetchData = async () => {
 			try {
 				setIsLoading(prev => ({...prev, listPeminjamanRenewal: true}))
+				const { data: listPeminjamanRenewal } = await getListPeminjamanRenewal()
+				setListPeminjamanRenewal(listPeminjamanRenewal.data)
 			} finally {
 				setIsLoading(prev => ({...prev, listPeminjamanRenewal: false}))
 			}
@@ -40,17 +49,28 @@ return (
 	<Layouts.ViewContainerLayout
 		buttons={
 			<>
-			<></>
+			<Layouts.ViewContainerButtonLayout>
+			  	<Link to={`/peminjaman/renewal/tambah
+			  	`}>
+			  		<Button className="p-2" variant="primary">
+			  		  Tambah Renewal
+			  		</Button>
+			  	</Link>
+			  	
+			  	
+			
+			  </Layouts.ViewContainerButtonLayout>
 			</>
 		}
 	>
 <Layouts.ListContainerCardLayout
 	title={"List Peminjaman Renewal"}
 	singularName={"Peminjaman"}
-	items={[]}
+	items={[listPeminjamanRenewal]}
 	isLoading={isLoading.listPeminjamanRenewal}
 >
 	<PeminjamanCard
+		listPeminjamanRenewal={listPeminjamanRenewal}
 		
   	/>
 </Layouts.ListContainerCardLayout>

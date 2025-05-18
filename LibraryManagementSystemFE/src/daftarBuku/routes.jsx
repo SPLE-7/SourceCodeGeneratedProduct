@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -7,7 +7,6 @@ import RequireAuth from '@/commons/auth/RequireAuth'
 
 import LihatBukuPage from './containers/LihatBukuPage'
 import TambahBukuPage from './containers/TambahBukuPage'
-import ConfirmDeleteBook from './containers/ConfirmDeleteBook'
 
 const daftarBukuRoutes = [
 { 
@@ -21,9 +20,6 @@ const daftarBukuRoutes = [
 	path: "/daftarbuku/tambah",
 	element: <TambahBukuPage />,
 }
-
-	
-,
 
 	
 

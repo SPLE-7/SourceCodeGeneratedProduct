@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -12,15 +12,22 @@ import { Button } from '@/commons/components';
 
 import * as Layouts from "@/commons/layouts";
 
-const PeminjamanCard = ({ 
+const PeminjamanCard = ({ listPeminjamanRenewal,
 	}) => {
   const { checkPermission } = useAuth();
   
   return (
     <Layouts.ListComponentCardLayout
-      items={[]}
+      items={[listPeminjamanRenewal]}
   	
   	itemsAttrs={[
+          {
+            id: "renewalCount",
+            condition: "",
+            label: "Renewal Count",
+  		  featureName: "renewalCount",
+            editable:  false 
+          }
   ]}
       itemsEvents={(peminjamanItem) => [
   	]}

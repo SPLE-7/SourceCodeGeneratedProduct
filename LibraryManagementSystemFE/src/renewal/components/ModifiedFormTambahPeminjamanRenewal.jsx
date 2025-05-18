@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -26,6 +26,8 @@ import {
   findAllowedPermission,
 } from "@/commons/constants/allowedPermission";
 import cleanFormData from "@/commons/utils/cleanFormData";
+import createRenewal from '../services/createRenewal'
+
 import { notifyError, notifySuccess} from "@/commons/utils/toaster";
 import * as Layouts from "@/commons/layouts";
 
@@ -47,11 +49,27 @@ const ModifiedFormTambahPeminjamanRenewal = ({
   
   const navigate = useNavigate()
   
+  const simpanRenewal = (data) => {
+    const cleanData = cleanFormData(data)
+    createRenewal({
+      ...cleanData,
+    })
+    .then(({ data: { data } }) => {
+      navigate(`/peminjaman/renewal/list`)
+  	notifySuccess(`Create Renewal berhasil!`);
+    })
+    .catch((error) => {
+      console.error(error);
+          notifyError(error);
+    });
+  }
+  
+  
   return (
 	<div>
 	  <Layouts.FormComponentLayout
 		  title="Tambah Peminjaman Renewal" 
-		  onSubmit={handleSubmit()}
+		  onSubmit={handleSubmit(simpanRenewal)}
 	
 	    vas={[
 		  ]}
@@ -79,6 +97,7 @@ const ModifiedFormTambahPeminjamanRenewal = ({
 		  ]}
 	
 		  itemsEvents={[
+				<Button key="Simpan Renewal" type="submit" variant="primary">Simpan Renewal</Button>
 	    ]}
 	  />
 	    

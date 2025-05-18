@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -10,10 +10,10 @@ import { Link } from "react-router";
 import { useParams } from "@/commons/hooks/useParams"
 import { HeaderContext } from "@/commons/components"
 import { useSearchParams } from "react-router";
-import ModifiedFormModifiedForm from '../components/ModifiedFormModifiedForm'
+import ModifiedFormFormBukuDigital from '../components/ModifiedFormFormBukuDigital'
 const TambahBukuDigitalpage = props => {
 const [isLoading, setIsLoading] = useState({
-	modifiedForm: false,
+	formBukuDigital: false,
 
 	});
 	const { setTitle } = useContext(HeaderContext);
@@ -33,10 +33,10 @@ return (
 		}
 	>
 <Layouts.FormContainerLayout
-		singularName={"Form"}
+		singularName={"Buku"}
 		
 	>
-		<ModifiedFormModifiedForm
+		<ModifiedFormFormBukuDigital
 			{...props}
 		/>
 	</Layouts.FormContainerLayout>

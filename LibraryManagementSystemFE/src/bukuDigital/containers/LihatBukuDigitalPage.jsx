@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -12,6 +12,8 @@ import { HeaderContext } from "@/commons/components"
 import { useNavigate } from "react-router";
 import { useAuth } from '@/commons/auth';
 import BukuCard from "../components/BukuCard";
+
+import getListBukuDigital from '../services/getListBukuDigital'
 const LihatBukuDigitalPage = props => {
 const { checkPermission } = useAuth();
 
@@ -21,10 +23,17 @@ const { checkPermission } = useAuth();
 	});
 	const { setTitle } = useContext(HeaderContext);
 
+const [listBukuDigital, setListBukuDigital] = useState()
+	
+	
+	
+
 useEffect(() => {
 		const fetchData = async () => {
 			try {
 				setIsLoading(prev => ({...prev, listBukuDigital: true}))
+				const { data: listBukuDigital } = await getListBukuDigital()
+				setListBukuDigital(listBukuDigital.data)
 			} finally {
 				setIsLoading(prev => ({...prev, listBukuDigital: false}))
 			}
@@ -40,17 +49,28 @@ return (
 	<Layouts.ViewContainerLayout
 		buttons={
 			<>
-			<></>
+			<Layouts.ViewContainerButtonLayout>
+			  	<Link to={`/daftarbuku/digital/tambah
+			  	`}>
+			  		<Button className="p-2" variant="primary">
+			  		  Tambah Buku Digital
+			  		</Button>
+			  	</Link>
+			  	
+			  	
+			
+			  </Layouts.ViewContainerButtonLayout>
 			</>
 		}
 	>
 <Layouts.ListContainerCardLayout
 	title={"List Buku Digital"}
 	singularName={"Buku"}
-	items={[]}
+	items={[listBukuDigital]}
 	isLoading={isLoading.listBukuDigital}
 >
 	<BukuCard
+		listBukuDigital={listBukuDigital}
 		
   	/>
 </Layouts.ListContainerCardLayout>

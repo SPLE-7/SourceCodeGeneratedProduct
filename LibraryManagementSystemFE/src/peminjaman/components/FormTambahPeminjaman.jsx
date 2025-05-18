@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -26,13 +26,12 @@ import {
   findAllowedPermission,
 } from "@/commons/constants/allowedPermission";
 import cleanFormData from "@/commons/utils/cleanFormData";
-import simpanPeminjaman from '../services/simpanPeminjaman'
+import createPeminjaman from '../services/createPeminjaman'
 
 import { notifyError, notifySuccess} from "@/commons/utils/toaster";
 import * as Layouts from "@/commons/layouts";
 
 const FormTambahPeminjaman = ({ 
-	dataBuku
  }) => {
   
   
@@ -52,12 +51,12 @@ const FormTambahPeminjaman = ({
   
   const simpanPeminjamanBuku = (data) => {
     const cleanData = cleanFormData(data)
-    simpanPeminjaman({
+    createPeminjaman({
       ...cleanData,
     })
     .then(({ data: { data } }) => {
       navigate(`/peminjaman/list`)
-  	notifySuccess(`Simpan Peminjaman berhasil!`);
+  	notifySuccess(`Create Peminjaman berhasil!`);
     })
     .catch((error) => {
       console.error(error);
@@ -92,27 +91,72 @@ const FormTambahPeminjaman = ({
 		          />
 		        )}
 		      />
+	,
+			  
+			  <Controller
+			    key="idBuku"
+		        name="idBuku"
+		        control={control}
+		        render={({ field, fieldState }) => (
+				  <InputField
+		            label="ID Buku"
+		            placeholder="Masukkan id buku"
+		            fieldState={fieldState}
+					{...field}
+					isRequired={false}
+		          />
+		        )}
+		      />
+	,
+			  
+			  <Controller
+			    key="status"
+		        name="status"
+		        control={control}
+		        render={({ field, fieldState }) => (
+				  <InputField
+		            label="Status"
+		            placeholder="Masukkan status"
+		            fieldState={fieldState}
+					{...field}
+					isRequired={false}
+		          />
+		        )}
+		      />
+	,
+			  
+			  <Controller
+			    key="tanggalPeminjaman"
+		        name="tanggalPeminjaman"
+		        control={control}
+		        render={({ field, fieldState }) => (
+				  <InputField
+		            label="Tanggal Peminjaman"
+		            placeholder="Masukkan tanggal peminjaman"
+		            fieldState={fieldState}
+					{...field}
+					isRequired={false}
+		          />
+		        )}
+		      />
+	,
+			  
+			  <Controller
+			    key="tanggalPengembalian"
+		        name="tanggalPengembalian"
+		        control={control}
+		        render={({ field, fieldState }) => (
+				  <InputField
+		            label="Tanggal Pengembalian"
+		            placeholder="Masukkan tanggal pengembalian"
+		            fieldState={fieldState}
+					{...field}
+					isRequired={false}
+		          />
+		        )}
+		      />
 		  ,
 	
-		  
-		  <Controller
-		    key="judulBuku"
-	        name="judulBuku"
-	        control={control}
-			rules={{ required: "Harap pilih selection field" }} 
-	        render={({ field, fieldState }) => (
-					<SelectionField
-				
-	            label="Selection Field"
-	            options={idBuku}
-	            placeholder="Masukkan selection field"
-					fieldState={fieldState}
-	            {...field}
-					isRequired={true}
-	          />
-	
-	        )}
-	      />
 		  ]}
 	
 		  itemsEvents={[

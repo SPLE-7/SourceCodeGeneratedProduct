@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -26,7 +26,7 @@ import {
   findAllowedPermission,
 } from "@/commons/constants/allowedPermission";
 import cleanFormData from "@/commons/utils/cleanFormData";
-import simpanReview from '../services/simpanReview'
+import createReview from '../services/createReview'
 
 import { notifyError, notifySuccess} from "@/commons/utils/toaster";
 import * as Layouts from "@/commons/layouts";
@@ -52,12 +52,12 @@ const FormFormTambahReview = ({
   
   const simpanReview = (data) => {
     const cleanData = cleanFormData(data)
-    simpanReview({
+    createReview({
       ...cleanData,
     })
     .then(({ data: { data } }) => {
      navigate(``)
-  	notifySuccess(`Simpan Review berhasil!`);
+  	notifySuccess(`Create Review berhasil!`);
     })
     .catch((error) => {
       console.error(error);
@@ -76,22 +76,39 @@ const FormFormTambahReview = ({
 		  ]}
 	
 		  formFields={[
-		  
+			  
+			  <Controller
+			    key="score"
+		        name="score"
+		        control={control}
+				rules={{ required: "Harap masukkan score" }} 
+		        render={({ field, fieldState }) => (
+				  <InputField
+		            label="Score"
+		            placeholder="Masukkan score"
+		            defaultValue={dataBuku.score}	            fieldState={fieldState}
+					{...field}
+					isRequired={true}
+		          />
+		        )}
+		      />
+		  ,
 	
 		  
 		  <Controller
-		    key="judulBuku"
-	        name="judulBuku"
+		    key=""
+	        name=""
 	        control={control}
 			rules={{ required: "Harap pilih judul buku" }} 
 	        render={({ field, fieldState }) => (
 					<SelectionField
 				
 	            label="Judul Buku"
-	            options={idBuku}
+	            options={[{ id: "Id Buku", name: "Id Buku" },
+	            { id: "Judul Buku", name: "Judul Buku" }]}
 	            placeholder="Masukkan judul buku"
 					fieldState={fieldState}
-					defaultValue={dataBuku.judulBuku}
+					defaultValue={dataBuku}
 	            {...field}
 					isRequired={true}
 	          />

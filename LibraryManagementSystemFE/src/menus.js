@@ -41,3 +41,66 @@ export const settingsMenu = [
 ]
 
 export default menus;
+
+addMenu({
+	route: '/daftarbuku/list',
+    label: 'DaftarBuku',
+    permission: '',
+	subMenus: []
+})
+
+addMenu({
+	route: '/wishlist/note/list',
+    label: 'WishlistWithNote',
+    permission: '',
+	subMenus: []
+})
+
+addMenu({
+	route: '/review/:id_buku/list',
+    label: 'Review',
+    permission: '',
+	subMenus: []
+})
+
+addMenu({
+	route: '/rekomendasi/list',
+    label: 'Recommendation',
+    permission: '',
+	subMenus: []
+})
+
+addMenu({
+	route: '/list-table-statistik',
+    label: 'Statistik',
+    permission: '',
+	subMenus: []
+})
+
+addMenu({
+	route: '/wishlist/list',
+    label: 'Wishlist',
+    permission: '',
+	subMenus: []
+})
+
+addMenu({
+	route: '/peminjaman/renewal/list',
+    label: 'Renewal',
+    permission: '',
+	subMenus: []
+})
+
+addMenu({
+	route: '/peminjaman/list',
+    label: 'Peminjaman',
+    permission: '',
+	subMenus: []
+})
+
+addMenu({
+	route: '/daftarbuku/digital/list',
+    label: 'BukuDigital',
+    permission: '',
+	subMenus: []
+})

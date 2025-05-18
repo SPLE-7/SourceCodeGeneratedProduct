@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 17/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -26,7 +26,7 @@ import {
   findAllowedPermission,
 } from "@/commons/constants/allowedPermission";
 import cleanFormData from "@/commons/utils/cleanFormData";
-import simpanWishlist from '../services/simpanWishlist'
+import createWishlist from '../services/createWishlist'
 
 import { notifyError, notifySuccess} from "@/commons/utils/toaster";
 import * as Layouts from "@/commons/layouts";
@@ -50,21 +50,26 @@ const FormTambahWishlist = ({
   
   const navigate = useNavigate()
   
-  const simpanWishlist = (data) => {
-    const cleanData = cleanFormData(data)
-    simpanWishlist({
+const simpanWishlist = (data) => {
+    const cleanData = cleanFormData(data);
+    const submitData = {
       ...cleanData,
+      id: cleanData.idAkun, 
+    };
+    delete submitData.idAkun; 
+
+    createWishlist({
+      ...submitData,
     })
     .then(({ data: { data } }) => {
-      navigate(`/wishlist/list`)
-  	notifySuccess(`Simpan Wishlist berhasil!`);
+      navigate(`/wishlist/list`);
+      notifySuccess(`Create Wishlist berhasil!`);
     })
     .catch((error) => {
       console.error(error);
-          notifyError(error);
+      notifyError(error);
     });
-  }
-  
+  };
   
   return (
 	<div>
@@ -78,13 +83,29 @@ const FormTambahWishlist = ({
 		  formFields={[
 			  
 			  <Controller
+			    key="idBuku"
+		        name="idBuku"
+		        control={control}
+		        render={({ field, fieldState }) => (
+				  <InputField
+		            label="idBuku"
+		            placeholder="Masukkan idbuku"
+		            fieldState={fieldState}
+					{...field}
+					isRequired={false}
+		          />
+		        )}
+		      />
+	,
+			  
+			  <Controller
 			    key="idAkun"
 		        name="idAkun"
 		        control={control}
 		        render={({ field, fieldState }) => (
 				  <InputField
-		            label="Id Akun"
-		            placeholder="Masukkan id akun"
+		            label="IdAkun"
+		            placeholder="Masukkan idakun"
 		            fieldState={fieldState}
 					{...field}
 					isRequired={false}
@@ -93,25 +114,6 @@ const FormTambahWishlist = ({
 		      />
 		  ,
 	
-		  
-		  <Controller
-		    key=""
-	        name=""
-	        control={control}
-	        render={({ field, fieldState }) => (
-					<SelectionField
-				
-	            label="Selection Field"
-	            options={[{ id: "Id Buku", name: "Id Buku" },
-	            { id: "Judul Buku", name: "Judul Buku" }]}
-	            placeholder="Masukkan selection field"
-					fieldState={fieldState}
-	            {...field}
-					isRequired={false}
-	          />
-	
-	        )}
-	      />
 		  ]}
 	
 		  itemsEvents={[

@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 17/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -12,15 +12,22 @@ import { Button } from '@/commons/components';
 
 import * as Layouts from "@/commons/layouts";
 
-const WishlistCard = ({ 
+const WishlistCard = ({ listWishlistWithStatus,
 	}) => {
   const { checkPermission } = useAuth();
   
   return (
     <Layouts.ListComponentCardLayout
-      items={[]}
+      items={[listWishlistWithStatus]}
   	
   	itemsAttrs={[
+          {
+            id: "status",
+            condition: "",
+            label: "Status",
+  		  featureName: "status",
+            editable:  false 
+          }
   ]}
       itemsEvents={(wishlistItem) => [
   	]}

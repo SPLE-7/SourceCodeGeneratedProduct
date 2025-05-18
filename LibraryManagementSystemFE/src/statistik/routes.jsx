@@ -1,16 +1,16 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
 import RequireAuth from '@/commons/auth/RequireAuth'
 
-import TableStatistik from './containers/TableStatistik'
+import ListTableStatistik from './containers/ListTableStatistik'
 
 const statistikRoutes = [
 { 
-	path: "list-table-statistik",
-	element: <TableStatistik />,
+	path: "/list-table-statistik",
+	element: <ListTableStatistik />,
 }
 
 	

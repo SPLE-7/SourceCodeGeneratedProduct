@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -11,8 +11,6 @@ import { useParams } from "@/commons/hooks/useParams"
 import { HeaderContext } from "@/commons/components"
 import { useSearchParams } from "react-router";
 import FormTambahPeminjaman from '../components/FormTambahPeminjaman'
-
-import getDataBuku from '../services/getDataBuku'
 const TambahPeminjamanBukuPage = props => {
 const [isLoading, setIsLoading] = useState({
 	tambahPeminjaman: false,
@@ -20,20 +18,7 @@ const [isLoading, setIsLoading] = useState({
 	});
 	const { setTitle } = useContext(HeaderContext);
 
-const [dataBuku, setDataBuku] = useState()
 
-useEffect(() => {
-    const fetch = async () => {
-	  setIsLoading(prev => ({...prev, tambahPeminjaman: true}))
-		const { data: dataBukuResponse } = await getDataBuku({  })
-
-	    setDataBuku(dataBukuResponse.data)
-
-
-	    setIsLoading(prev => ({...prev, tambahPeminjaman: false}))
-    }
-	fetch()
-  }, [])
 
 	
 	useEffect(() => {
@@ -49,16 +34,11 @@ return (
 	>
 <Layouts.FormContainerLayout
 		singularName={"Peminjaman"}
-		isLoading={isLoading.tambahPeminjaman}
+		
 	>
-		{dataBuku ? 
-		(<>
-		 <FormTambahPeminjaman
-			{...{ 
-				dataBuku
-				}}
-		 /> 
-		</>)  : (<></>)}
+		<FormTambahPeminjaman
+			{...props}
+		/>
 	</Layouts.FormContainerLayout>
 
 	</Layouts.ViewContainerLayout>

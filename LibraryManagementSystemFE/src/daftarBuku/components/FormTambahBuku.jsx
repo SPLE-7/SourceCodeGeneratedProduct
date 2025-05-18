@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -26,7 +26,7 @@ import {
   findAllowedPermission,
 } from "@/commons/constants/allowedPermission";
 import cleanFormData from "@/commons/utils/cleanFormData";
-import simpanBuku from '../services/simpanBuku'
+import createBuku from '../services/createBuku'
 
 import { notifyError, notifySuccess} from "@/commons/utils/toaster";
 import * as Layouts from "@/commons/layouts";
@@ -51,18 +51,15 @@ const FormTambahBuku = ({
   
   const sImpanBuku = (data) => {
     const cleanData = cleanFormData(data)
-	console.log(cleanData)
-	cleanData.jumlahHalaman = parseInt(cleanData.jumlahHalaman)
-    simpanBuku({
+    createBuku({
       ...cleanData,
     })
     .then(({ data: { data } }) => {
       navigate(`/daftarbuku/list`)
-  	notifySuccess(`Simpan Buku berhasil!`);
+  	notifySuccess(`Create Buku berhasil!`);
     })
     .catch((error) => {
       console.error(error);
-	  cons
           notifyError(error);
     });
   }
@@ -78,23 +75,6 @@ const FormTambahBuku = ({
 		  ]}
 	
 		  formFields={[
-			  
-			  <Controller
-			    key="idBuku"
-		        name="idBuku"
-		        control={control}
-				rules={{ required: "Harap masukkan id buku" }} 
-		        render={({ field, fieldState }) => (
-				  <InputField
-		            label="Id Buku"
-		            placeholder="Masukkan id buku"
-		            fieldState={fieldState}
-					{...field}
-					isRequired={true}
-		          />
-		        )}
-		      />
-	,
 			  
 			  <Controller
 			    key="judulBuku"
@@ -149,7 +129,6 @@ const FormTambahBuku = ({
 			  
 			  <Controller
 			    key="jumlahHalaman"
-				type="number"
 		        name="jumlahHalaman"
 		        control={control}
 				rules={{ required: "Harap masukkan jumlah halaman" }} 

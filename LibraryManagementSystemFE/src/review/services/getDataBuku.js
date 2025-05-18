@@ -7,7 +7,7 @@ const getDataBuku = (params = {}) => {
 	const { getToken } = tokenManager();
 	const token = getToken();
 	let paramsGet = Object.assign(params, {token});
-	return axios.get(`${environment.rootApi}/call/review`, {
+	return axios.get(`${environment.rootApi}//call/buku/list`, {
 		params: paramsGet,		
 		headers: {
 			'Authorization': token,

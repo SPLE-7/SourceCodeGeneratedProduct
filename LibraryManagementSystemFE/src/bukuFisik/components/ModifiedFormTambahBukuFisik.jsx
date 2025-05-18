@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -26,6 +26,8 @@ import {
   findAllowedPermission,
 } from "@/commons/constants/allowedPermission";
 import cleanFormData from "@/commons/utils/cleanFormData";
+import createBukuFisik from '../services/createBukuFisik'
+
 import { notifyError, notifySuccess} from "@/commons/utils/toaster";
 import * as Layouts from "@/commons/layouts";
 
@@ -47,11 +49,27 @@ const ModifiedFormTambahBukuFisik = ({
   
   const navigate = useNavigate()
   
+  const simpanBukuFisik = (data) => {
+    const cleanData = cleanFormData(data)
+    createBukuFisik({
+      ...cleanData,
+    })
+    .then(({ data: { data } }) => {
+      navigate(`/daftarbuku/fisik/list`)
+  	notifySuccess(`Create Buku Fisik berhasil!`);
+    })
+    .catch((error) => {
+      console.error(error);
+          notifyError(error);
+    });
+  }
+  
+  
   return (
 	<div>
 	  <Layouts.FormComponentLayout
 		  title="Tambah Buku Fisik" 
-		  onSubmit={handleSubmit()}
+		  onSubmit={handleSubmit(simpanBukuFisik)}
 	
 	    vas={[
 		  ]}
@@ -79,6 +97,7 @@ const ModifiedFormTambahBukuFisik = ({
 		  ]}
 	
 		  itemsEvents={[
+				<Button key="Simpan Buku Fisik" type="submit" variant="primary">Simpan Buku Fisik</Button>
 	    ]}
 	  />
 	    

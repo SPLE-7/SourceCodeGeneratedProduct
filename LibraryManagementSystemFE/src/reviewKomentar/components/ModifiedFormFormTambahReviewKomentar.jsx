@@ -1,5 +1,5 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 18/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -26,6 +26,8 @@ import {
   findAllowedPermission,
 } from "@/commons/constants/allowedPermission";
 import cleanFormData from "@/commons/utils/cleanFormData";
+import addedAction from '../services/addedAction'
+
 import { notifyError, notifySuccess} from "@/commons/utils/toaster";
 import * as Layouts from "@/commons/layouts";
 
@@ -47,11 +49,27 @@ const ModifiedFormFormTambahReviewKomentar = ({
   
   const navigate = useNavigate()
   
+  const simpanReviewKomentar = (data) => {
+    const cleanData = cleanFormData(data)
+    addedAction({
+      ...cleanData,
+    })
+    .then(({ data: { data } }) => {
+      navigate(`/review/${id_buku/list}`)
+  	notifySuccess(`AddedAction berhasil!`);
+    })
+    .catch((error) => {
+      console.error(error);
+          notifyError(error);
+    });
+  }
+  
+  
   return (
 	<div>
 	  <Layouts.FormComponentLayout
 		  title="Form Tambah Review Komentar" 
-		  onSubmit={handleSubmit()}
+		  onSubmit={handleSubmit(simpanReviewKomentar)}
 	
 	    vas={[
 		  ]}
@@ -59,8 +77,8 @@ const ModifiedFormFormTambahReviewKomentar = ({
 		  formFields={[
 			  
 			  <Controller
-			    key="isiKomentar"
-		        name="isiKomentar"
+			    key="komentar"
+		        name="komentar"
 		        control={control}
 				rules={{ required: "Harap masukkan isi komentar" }} 
 		        render={({ field, fieldState }) => (
@@ -78,6 +96,7 @@ const ModifiedFormFormTambahReviewKomentar = ({
 		  ]}
 	
 		  itemsEvents={[
+				<Button key="Simpan Review Komentar" type="submit" variant="primary">Simpan Review Komentar</Button>
 	    ]}
 	  />
 	    

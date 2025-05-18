@@ -1,12 +1,12 @@
 /*
-	Generated on 09/05/2025 by UI Generator PRICES-IDE
+	Generated on 17/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
 import RequireAuth from '@/commons/auth/RequireAuth'
 
 import LihatWishlistWithNotePage from './containers/LihatWishlistWithNotePage'
-import AddWishlistWithNotePage from './containers/AddWishlistWithNotePage'
+import TambahWishlistWithNotePage from './containers/TambahWishlistWithNotePage'
 
 const wishlistWithNoteRoutes = [
 	{ 
@@ -14,8 +14,8 @@ const wishlistWithNoteRoutes = [
 		element: <LihatWishlistWithNotePage />,
 	},
 	{ 
-		path: "/wishlist/notes/add",
-		element: <AddWishlistWithNotePage />,
+		path: "/wishlist/note/tambah",
+		element: <TambahWishlistWithNotePage />,
 	}
 ]
 
