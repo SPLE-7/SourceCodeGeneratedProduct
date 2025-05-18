@@ -51,6 +51,8 @@ const FormTambahPeminjaman = ({
   
   const simpanPeminjamanBuku = (data) => {
     const cleanData = cleanFormData(data)
+    cleanData.id = cleanData.idAkun
+    delete cleanData.idAkun
     createPeminjaman({
       ...cleanData,
     })
