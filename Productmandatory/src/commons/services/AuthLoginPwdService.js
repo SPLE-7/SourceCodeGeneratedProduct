@@ -15,7 +15,7 @@ class AuthLoginPwdService {
     try {
       const response = await axios.post(
         `${environment.rootApi}/auth/login/pwd?${encodedData}`,
-        params,
+        params
       );
 
       return response;
