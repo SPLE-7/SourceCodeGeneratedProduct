@@ -4,7 +4,7 @@ import useAppearance from "@/commons/appearance/useAppearance";
 import PropTypes from "prop-types";
 
 const SelectionField = forwardRef((props, ref) => {
-  const { label, variant, options, placeholder, className, fieldState, kit } =
+  const { label, variant, options, optionKey, optionLabel, placeholder, className, fieldState, kit } =
     props;
   const interfaceKit = useAppearance();
   const inputStyle = (kit ?? interfaceKit).input;
@@ -33,8 +33,8 @@ const SelectionField = forwardRef((props, ref) => {
         </option>
         {options &&
           options.map((option) => (
-            <option value={option.id} key={option.id}>
-              {option.name}
+            <option value={option[optionKey]} key={option[optionKey]}>
+            {option[optionLabel]}
             </option>
           ))}
       </select>

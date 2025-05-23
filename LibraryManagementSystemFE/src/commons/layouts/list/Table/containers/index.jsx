@@ -10,7 +10,7 @@ const ListContainerTableLayout = ({
   children,
 }) => {
   return (
-    <div className="mx-auto w-full max-w-screen-xl prose p-6 flex flex-col">
+    <div className="mx-auto w-full max-w-screen-xl prose flex flex-col">
       <h2 className="text-center sm:text-left">{title}</h2>
       <div className="not-prose">
         {isLoading ? (

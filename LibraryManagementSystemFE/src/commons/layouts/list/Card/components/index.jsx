@@ -73,23 +73,32 @@ const ListComponentCardLayout = ({
 
   return (
     <>
-      {isSearchable && <SearchField updateSearchText={updateSearchText} />}
-      {filterFields?.map(
-        (filterField) =>
-          filterField &&
-          (filterField.isMultiSelection ? (
-            <MultiFilterField
-              filterField={filterField}
-              updateFilterText={updateFilterText}
-            />
-          ) : (
-            <FilterField
-              filterField={filterField}
-              updateFilterText={updateFilterText}
-            />
-          ))
-      )}
-      <List column="4" isRow={isRow}>
+      <div className="flex flex-wrap items-center gap-4 mb-4">
+        {isSearchable && (
+          <div className="flex-1 min-w-[200px]">
+            <SearchField updateSearchText={updateSearchText} />
+          </div>
+        )}
+        <div className="flex flex-wrap gap-2 sm:justify-start">
+          {filterFields?.map(
+            (filterField) =>
+              filterField && (
+                filterField.isMultiSelection
+                ?
+                <MultiFilterField
+                  filterField={filterField}
+                  updateFilterText={updateFilterText}
+                />
+                :
+                <FilterField
+                  filterField={filterField}
+                  updateFilterText={updateFilterText}
+                />
+              ),
+          )}
+        </div>
+      </div>
+      <List column="4">
         {viewItems?.map((collection) =>
           collection?.map((item) => (
             <CardRow

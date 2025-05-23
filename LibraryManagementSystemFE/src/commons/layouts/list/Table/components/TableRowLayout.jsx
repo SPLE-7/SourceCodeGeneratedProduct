@@ -71,7 +71,7 @@ const TableRowLayout = ({
               checked={selectedItems.some(
                 (selectedItem) => selectedItem[itemId] === item[itemId]
               )}
-              onChange={(e) => handleCheckboxChange(editedValues, e.target.checked)}
+              onChange={(e) => handleCheckboxChange(item, e.target.checked)}
               className="w-4 h-4 mr-2"
             />
           </div>

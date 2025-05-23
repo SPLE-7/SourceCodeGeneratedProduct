@@ -115,23 +115,30 @@ const ListComponentLayout = ({
     <div className="card bg-base-100">
       <div className="card-body p-0 sm:p-8 border sm:border-none">
         <div className="flex flex-wrap items-center justify-stretch gap-5">
-          {isSearchable && <SearchField updateSearchText={updateSearchText} />}
-          {filterFields?.map(
-            (filterField) =>
-              filterField && (
-                filterField.isMultiSelection
-                  ?
-                  <MultiFilterField
-                    filterField={filterField}
-                    updateFilterText={updateFilterText}
-                  />
-                  :
-                  <FilterField
-                    filterField={filterField}
-                    updateFilterText={updateFilterText}
-                  />
-              ),
-          )}
+          <div className="flex flex-wrap items-center gap-4 mb-4">
+            {isSearchable && (
+              <div className="flex-1 min-w-[200px]">
+                <SearchField updateSearchText={updateSearchText} />
+              </div>
+            )}
+            <div className="flex flex-wrap gap-2 sm:justify-start">
+              {filterFields?.map(
+                (filterField) =>
+                  filterField && (
+                    filterField.isMultiSelection ? (
+                      <MultiFilterField
+                        filterField={filterField}
+                        updateFilterText={updateFilterText}
+                      />
+                    ) : (
+                      <FilterField
+                        filterField={filterField}
+                        updateFilterText={updateFilterText}
+                      />)
+                  ),
+              )}
+            </div>
+          </div>
         </div>
         <Table className={"table-fixed sm:table-auto"}>
           <TableHead>

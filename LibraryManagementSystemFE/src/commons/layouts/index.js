@@ -17,7 +17,7 @@ export { default as FormComponentLayout } from "./form/components";
 export { default as FormContainerLayoutMobileFirst } from "./mobilefirst/form/containers";
 export { default as FormComponentLayoutMobileFirst } from "./mobilefirst/form/components";
 export {default as BatchUpdateFormComponentLayout} from "./form/components/BatchUpdateFormLayout"
-
+export {default as FormModalLayout} from "./form/components/FormModalLayout";
 export { default as ViewContainerLayout } from "./viewContainer";
 export { default as ViewContainerLayoutMobileFirst } from "./mobilefirst/viewContainer";
 
