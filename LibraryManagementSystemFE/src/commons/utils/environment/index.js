@@ -6,6 +6,6 @@ export default import.meta.env.MODE === "production"
     }
   : {
       production: false,
-      rootApi: `http://localhost:7776/`,
+      rootApi: `/api`, 
       staticServerApi: `/static`,
     };

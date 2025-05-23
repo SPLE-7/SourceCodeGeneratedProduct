@@ -9,7 +9,7 @@ const createPeminjaman = (data = {}) => {
 	const { getToken } = tokenManager();
 	const token = getToken();
 	
-	return axios.post(`${environment.rootApi}call/peminjaman`, body,
+	return axios.post(`${environment.rootApi}/call/peminjamanbuku`, body,
 	{
 		params: { token },
 		

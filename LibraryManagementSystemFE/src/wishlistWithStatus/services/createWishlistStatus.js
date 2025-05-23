@@ -9,7 +9,7 @@ const createWishlistStatus = (data = {}) => {
 	const { getToken } = tokenManager();
 	const token = getToken();
 	
-	return axios.post(`${environment.rootApi}/call/wishliststatus/create`, body,
+	return axios.post(`${environment.rootApi}/call/wishlistwithstatus/create`, body,
 	{
 		params: { token },
 		

@@ -15,7 +15,7 @@ const ListContainerCardLayout = ({ title, isLoading, items, children }) => {
           children
         ) : (
           <div className="py-8 text-center">
-            Tidak ada data untuk ditampilkan
+            {/* Tidak ada data untuk ditampilkan */}
           </div>
         )}
       </div>

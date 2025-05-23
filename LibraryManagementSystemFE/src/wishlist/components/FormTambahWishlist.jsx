@@ -1,5 +1,5 @@
 /*
-	Generated on 21/05/2025 by UI Generator PRICES-IDE
+	Generated on 17/05/2025 by UI Generator PRICES-IDE
 	https://amanah.cs.ui.ac.id/research/ifml-regen
 	version 3.8.0
 */
@@ -42,29 +42,28 @@ const FormTambahWishlist = ({
     handleSubmit,
   } = useForm()
   
-  
-  
-  
-  
-  
-  
   const navigate = useNavigate()
   
-  const simpanWishlist = (data) => {
-    const cleanData = cleanFormData(data)
-    createWishlist({
+const simpanWishlist = (data) => {
+    const cleanData = cleanFormData(data);
+    const submitData = {
       ...cleanData,
+      id: cleanData.idAkun, 
+    };
+    delete submitData.idAkun; 
+
+    createWishlist({
+      ...submitData,
     })
     .then(({ data: { data } }) => {
-      navigate(`/wishlist/list`)
-  	notifySuccess(`Create Wishlist berhasil!`);
+      navigate(`/wishlist/list`);
+      notifySuccess(`Create Wishlist berhasil!`);
     })
     .catch((error) => {
       console.error(error);
-          notifyError(error);
+      notifyError(error);
     });
-  }
-  
+  };
   
   return (
 	<div>
