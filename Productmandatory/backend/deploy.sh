@@ -10,7 +10,7 @@ echo "Eclipse Deployment Script for PRICES-IDE products"
 echo
 
 # Step 1 - Copy product components to Amanah server
-product_name="productsatu"
+product_name="productmandatory"
 echo "Deploying PRICES-IDE product '$product_name' to Amanah server."
 echo
 

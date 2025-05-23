@@ -7,7 +7,7 @@ echo Eclipse Deployment Script ini bertujuan untuk melakukan deployment produk P
 echo:
 
 :: Step 1 - Copy komponen produk ke server Amanah
-set product_name=productsatu
+set product_name=productmandatory
 echo Script ini akan melakukan deployment produk PRICES-IDE bernama %product_name% ke server Amanah. Silahkan isi informasi produk terkait.
 echo:
 
