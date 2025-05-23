@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/commons/components';
 
-const WishlistCard = ({ item }) => {
+const WishlistCard = ({ item, onDelete }) => {
   if (!item || !item.judulBuku) return null;
 
   return (
@@ -14,7 +14,13 @@ const WishlistCard = ({ item }) => {
       <p><strong>Genre:</strong> {item.genre}</p>
 
       <div className="mt-2">
-        <Button size="sm" variant="info">Hapus</Button>
+        <Button
+          size="sm"
+          variant="secondary" 
+          onClick={() => onDelete(item.id)}
+        >
+          Hapus
+        </Button>
       </div>
     </div>
   );
