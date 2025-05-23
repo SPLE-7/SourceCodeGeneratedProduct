@@ -25,6 +25,7 @@ const { checkPermission } = useAuth();
 
 const [listBukuFisik, setListBukuFisik] = useState()
 	
+const { isAuthenticated, loginGoogle, loginPassword } = useAuth();
 	
 	
 

@@ -2,17 +2,16 @@ import { useAuth } from "@/commons/auth";
 import { Button, InputField } from "@/commons/components";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
-import { Link, Navigate, useNavigate, useLocation } from "react-router";
+import { Link, Navigate, useNavigate } from "react-router";
 
 const RegisterPage = () => {
   const { loginGoogle, isAuthenticated, registerPassword } = useAuth();
   const { control, handleSubmit } = useForm();
-  const { state } = useLocation();
   const navigate = useNavigate();
 
   const registerWithPassword = (data) => {
     registerPassword(data);
-    navigate(state);
+    navigate("/login");
   };
 
   if (isAuthenticated) {

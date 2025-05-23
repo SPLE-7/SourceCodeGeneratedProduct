@@ -9,7 +9,7 @@ const createBukuFisik = (data = {}) => {
 	const { getToken } = tokenManager();
 	const token = getToken();
 	
-	return axios.post(`${environment.rootApi}/call/bukufisik/create`, body,
+	return axios.post(`${environment.rootApi}call/bukufisik/create`, body,
 	{
 		params: { token },
 		

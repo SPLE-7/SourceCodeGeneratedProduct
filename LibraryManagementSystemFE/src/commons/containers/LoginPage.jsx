@@ -7,12 +7,11 @@ import { Controller, useForm } from "react-hook-form";
 const LoginPage = () => {
   const { control, handleSubmit } = useForm();
   const { isAuthenticated, loginGoogle, loginPassword } = useAuth();
-  const { state } = useLocation();
   const navigate = useNavigate();
 
   const loginWithPassword = (data) => {
     loginPassword(data);
-    navigate(state);
+    navigate("/daftarbuku/fisik/list");
   };
 
   if (isAuthenticated) {
